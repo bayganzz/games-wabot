@@ -43,7 +43,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersmythic = sortedmythic.map(v => v[0])
     let userslegendary = sortedlegendary.map(v => v[0])
     let str = `
-👤 *Inventory View*
+🕹 *Inventory View*
 
 Name: *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*
 Total inventory: *${diamond + potion + sampah + makananpet}* items
@@ -64,14 +64,14 @@ Exp: *${exp}*
 🍖 Makanan Pet: *${makananpet}*
 
 *Crate*
-📦 Common: *${common}*
-🎁 Uncommon: *${uncommon}*
-[◇] Mythic: *${mythic}*
-[¤] Legendary: *${legendary}*
+Common: *${common}*
+Uncommon: *${uncommon}*
+📦 Mythic: *${mythic}*
+🎁 Legendary: *${legendary}*
 ${readMore}
 
-*Pet*
-Total pet: {pet}
+*🐾 Pet/Peliharaan*
+Total pet: *${pet}*
 
 🐴 Kuda: *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda == 2 ? 'Level 2' : '' || kuda == 3 ? 'Level 3' : '' || kuda == 4 ? 'Level 4' : '' || kuda == 5 ? 'Level MAX' : ''}*
 🦊 Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*
@@ -82,13 +82,13 @@ Total pet: {pet}
 │Exp *${exp}* -> *${max}* [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 ╰────────────────
 ╭────────────────
-│🦊 Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah * 100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
+│🦊 Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah * 100}*` : '' || rubah == 5 ? '*Max Level*' : ''}│
 ╰────────────────
 ╭────────────────
-│🐱 Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing * 100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
+│🐱 Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing * 100}*` : '' || kucing == 5 ? '*Max Level*' : ''}│
 ╰────────────────
 ╭────────────────
-│🐴 Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda * 100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
+│🐴 Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda * 100}*` : '' || kuda == 5 ? '*Max Level*' : ''}│
 ╰────────────────
 
 
