@@ -43,20 +43,24 @@ let handler = async (m, { conn, usedPrefix }) => {
     let usersmythic = sortedmythic.map(v => v[0])
     let userslegendary = sortedlegendary.map(v => v[0])
     let str = `
-Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*
+Inventory View 🕹
+Name: *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*
+Total inventory: *${diamond + potion + sampah + makananpet}* items
+Total crates: *${common + uncommon + mythic + legendary}* crates
 
-Health: *${healt}*
-Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
-Money: *${money}*
+❤ Health: *${healt}*
+🥋 Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
+💳 Money Amount: *${money}*
+
+*More information*
 Level: *${level}*
 Exp: *${exp}*
 
 *Inventory*
-Diamond: *${diamond}*
-Potion: *${potion}*
-Sampah: *${sampah}*
-Makanan Pet: *${makananpet}*
-Total inv: *${diamond + potion + sampah + makananpet}* item
+💎 Diamond: *${diamond}*
+⛾ Potion: *${potion}*
+🗑 Sampah: *${sampah}*
+🍖 Makanan Pet: *${makananpet}*
 
 *Crate*
 Common: *${common}*
@@ -96,8 +100,8 @@ Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || k
 8.Top Legendary *${userslegendary.indexOf(m.sender) + 1}* dari *${userslegendary.length}*
 9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* dari *${userssampah.length}*
 \n${readMore}\n
-Warn: *${warn}*
-Banned: *No*
+🚫 Warn: *${warn}*
+🚫 Banned: *No*
 `.trim()
     conn.reply(m.chat, str, m)
 }
