@@ -18,6 +18,10 @@
 #### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BochilGaming/games-wabot)
 
+
+#### Deploy to Cyclic
+[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+
 #### Heroku Buildpack
 | BuildPack | LINK |
 |--------|--------|
